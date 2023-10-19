@@ -9,7 +9,7 @@ import (
 )
 
 type PixKeyRepositoryInterface interface {
-	Register(pixKey *PixKey) (*PixKey, error)
+	RegisterKey(pixKey *PixKey) (*PixKey, error)
 	FindKeyByKind(key string, kind string) (*PixKey, error)
 	AddBank(bank *Bank) error
 	AddAccount(account *Account) error
@@ -42,7 +42,7 @@ func (pixKey *PixKey) isValid() error {
 	return nil
 }
 
-func NewPixKey(account *Account, kind string, key string) (*PixKey, error) {
+func NewPixKey(kind string, account *Account,key string) (*PixKey, error) {
 	pixKey := PixKey{
 		Kind: kind,
 		Key: key,
