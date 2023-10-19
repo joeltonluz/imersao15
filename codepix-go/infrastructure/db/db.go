@@ -6,8 +6,9 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/jinzhu/gorm"
 	"github.com/joeltonluz/imersao15/codepix-go/domain/model"
+
+	"github.com/jinzhu/gorm"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 	_ "gorm.io/driver/sqlite"
